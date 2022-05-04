@@ -3,7 +3,7 @@ from time import sleep , time
 import time
 tr = []
 P = ""
-password="aaaaaaaa"  
+password="11111111"  
 for j in range(8) : 
     start_time = time.time()
     os.system(  "echo "+password+" | ./pin_checker")
