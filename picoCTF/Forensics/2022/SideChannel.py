@@ -5,9 +5,6 @@ tr = []
 P = ""
 password="11111111"  
 for j in range(8) : 
-    start_time = time.time()
-    os.system(  "echo "+password+" | ./pin_checker")
-    bad_time =float(time.time() - start_time)
     print("[+]"+"-"*100+"[+]")
     for i in range(10) :
         password = password[:j] + str(i) + password[j+1:] ; print("password is " + password)
