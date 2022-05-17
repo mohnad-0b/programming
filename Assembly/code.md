@@ -149,7 +149,7 @@
   BB
   BBB
   BBBB
-  ```
+  ```Assembly
           org 100h
         
         mov ah,01h
