@@ -57,7 +57,7 @@ def find_full_flag(flag=flag,flagb=flagb):
         for i in printable:
             data = ord(i).to_bytes(1, 'big').hex().encode()
             
-            io.sendlineafter(b'> ',b'aa'*4 + flagb[10+j*2:] + data + b'aa'*(11-j))
+            io.sendlineafter(b'> ',flagb[:8] + flagb[10+j*2:] + data + b'aa'*(11-j))
 
             recv = io.recvline()
             blook = recv[32:64]
