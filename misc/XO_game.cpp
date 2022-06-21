@@ -2,7 +2,7 @@
 #include <string.h>
 using namespace std;
 
-class XO_game{
+class XO_game {
 
 public:
 
@@ -12,35 +12,36 @@ public:
 		for (int i = 0; i < 3; i++) {
 			cout << " | ";
 			for (int j = 0; j < 3; j++) {
-				cout << G[i][j] << " | "; }
-			cout << "\n  -------------\n "; 
+				cout << G[i][j] << " | ";
+			}
+			cout << "\n  -------------\n ";
 		}
 	}
 
-	void GenGame(){
+	void GenGame() {
 		int n = 0;
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				G[i][j] = ++n+char('0');
+				G[i][j] = ++n + char('0');
 			}
 		}
 	}
 
 	void cheakWiner() {
-		if ((G[0][0] == G[0][1] && G[0][1] == G[0][2]) && (G[0][0] == 'X' || G[0][0] == 'O') || (G[1][0] == G[1][1] && G[1][1] == G[1][2]) && (G[1][2] == 'X' || G[0][2] == 'O') || (G[2][0] == G[2][1] && G[2][1] == G[2][2]) && (G[2][2] == 'X' || G[2][2] == 'O') || (G[0][0] == G[1][0] && G[1][0] == G[2][0]) && (G[2][0] == 'X' || G[2][0] == 'O') || (G[0][1] == G[1][1] && G[2][1] == G[0][1]) && (G[0][1] == 'X' || G[0][1] == 'O') || (G[0][2] == G[1][2] && G[1][2] == G[2][2]) && (G[2][2] == 'X' || G[2][2] == 'O' ) || (G[0][0] == G[1][1] && G[1][1] == G[2][2]) && (G[2][2] == 'X' || G[2][2] == 'O') || (G[0][0] == G[1][1] && G[1][1] == G[2][0]) && (G[2][0] == 'X' || G[2][0] == 'O' ))
+		if ((G[0][0] == G[0][1] && G[0][1] == G[0][2]) && (G[0][0] == 'X' || G[0][0] == 'O') || (G[1][0] == G[1][1] && G[1][1] == G[1][2]) && (G[1][2] == 'X' || G[0][2] == 'O') || (G[2][0] == G[2][1] && G[2][1] == G[2][2]) && (G[2][2] == 'X' || G[2][2] == 'O') || (G[0][0] == G[1][0] && G[1][0] == G[2][0]) && (G[2][0] == 'X' || G[2][0] == 'O') || (G[0][1] == G[1][1] && G[2][1] == G[0][1]) && (G[0][1] == 'X' || G[0][1] == 'O') || (G[0][2] == G[1][2] && G[1][2] == G[2][2]) && (G[2][2] == 'X' || G[2][2] == 'O') || (G[0][0] == G[1][1] && G[1][1] == G[2][2]) && (G[2][2] == 'X' || G[2][2] == 'O') || (G[0][2] == G[1][1] && G[1][1] == G[2][0]) && (G[2][0] == 'X' || G[2][0] == 'O'))
 		{
-			cout << "----------\n| "<< chr << " is WIN |  \n ---------- \n";
+			cout << "----------\n| " << chr << " WINs |  \n ---------- \n";
 			win = true;
 		}
 
 	}
 
 	void StarGame() {
-		
+
 		string input;
 		int index;
 
-		
+
 		while (true)
 		{
 			c += 1;
@@ -48,31 +49,36 @@ public:
 				cout << "------\n| Draw |  \n ------ \n";
 				break;
 			}
-			cout << "\n- choose a number: ";
+			cout << "\n [ " << chr << " ] choose a number: ";
 			cin >> input;
-	
+
 			if (input != "") {
 				if (input >= "1" && input <= "9") {
 					index = (int)input[0] - (int('0') + 1);
 					if (G[index / 3][index % 3] != 'O' && G[index / 3][index % 3] != 'X')
 					{
+
+						G[index / 3][index % 3] = chr;
+						ShowGame();
+						cheakWiner();
 						if (chr == 'X') {
 							chr = 'O';
 						}
 						else {
 							chr = 'X';
 						}
-						G[index / 3][index % 3] = chr;
-						ShowGame();
-						cheakWiner();
+
 						if (win) { break; }
-					}else {
+					}
+					else {
 						puts("This place is used");
-					}	
-				}else {
+					}
+				}
+				else {
 					puts("Enter number in range [1..9]\n");
 				}
-			}else{
+			}
+			else {
 				puts("Please print something :)");
 			}
 		}
@@ -85,11 +91,11 @@ private:
 	int c = 0;
 };
 
-XO_game::XO_game(){
+XO_game::XO_game() {
 	GenGame();
 	ShowGame();
 }
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
 
 	XO_game G;
 	G.StarGame();
