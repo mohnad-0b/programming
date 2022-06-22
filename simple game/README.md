@@ -9,7 +9,7 @@ curl "https://raw.githubusercontent.com/mohnad-0b/programming/main/simple%20game
 ```
 Now create a file called `my.rc` or whatever name you want **but ends with .rc** Type in it `id ICON` and the path to your icon
 ```powershell
- echo "id ICON XOgame.ico" > my.rc
+write-output "id ICON XOgame.ico" | out-file  my.rc -Encoding "UTF8"
 ```
 and 
 ```powershell
