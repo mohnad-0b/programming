@@ -5,7 +5,7 @@ install
 ```
 You can choose the icon you want but now :
 ```powershell 
-curl "https://github.com/mohnad-0b/programming/blob/main/simple%20game/XOgame.ico" -O XOgame.ico      
+curl "https://raw.githubusercontent.com/mohnad-0b/programming/main/simple%20game/XOgame.ico" -O XOgame.ico       
 ```
 Now create a file called `my.rc` or whatever name you want **but ends with .rc** Type in it `id ICON` and the path to your icon
 ```powershell
