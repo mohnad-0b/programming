@@ -71,7 +71,8 @@ public:
 						if (win) { break; }
 					}
 					else {
-						puts("This place is used");
+						c -= 1;
+						puts("\n This place is used");
 					}
 				}
 				else {
@@ -99,6 +100,5 @@ int main(int argc, char* argv[]) {
 
 	XO_game G;
 	G.StarGame();
-
 
 }
