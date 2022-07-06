@@ -1,4 +1,4 @@
-f islower(string[0]):
+if islower(string[0]):
     for i in range(len(string[0:])-1):
         if  islower(string[i+1]):
             print(string)
