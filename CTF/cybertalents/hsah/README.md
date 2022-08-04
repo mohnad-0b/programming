@@ -1,12 +1,11 @@
-**cybertalents**
-
-*Challenge Name: [hsah](https://cybertalents.com/challenges/cryptography/hsah)*
-
+*Challenge Name: [hsah](https://cybertalents.com/challenges/cryptography/hsah)*  
+*Category: Cryptography*                                                                                                                                               
 *Level: medium*
 
-Challenge Description
-
+## Challenge Description
+```
 Unhash the trash?
+```
 
 code to enc : 
 ```py
@@ -85,3 +84,8 @@ for i in sorted(flag.items()) :
  Output:
  
  FLAG{Find-the-hash-in-trash!!}
+ 
+ 
+*If you want any question, contact me*     
+*Discord : mohnad#9100*      
+*[LinkedIn](https://www.linkedin.com/in/mohnad-banat/)*
