@@ -189,7 +189,7 @@
 x db 'This is my program'
 y db 20 dup(?)
 
-```assmbly
+```Assembly
 org 100h
 
 mov di,offset x
