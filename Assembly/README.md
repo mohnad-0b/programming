@@ -217,3 +217,25 @@ FindSpace:
  HLT 
 
 ```
+7- replace the character 'a' in the follwing string to '\*' string 
+db 'abcdefaghiak'
+
+```Assembly
+org 100h
+
+mov di,offset x
+mov al, 'a'
+mov cx,12
+L: 
+ scasb
+ je findA
+ loop L 
+END: hlt
+
+x db "abcdefaghiak"
+findA:
+ mov [di-1],"*"
+ cmp cx,0
+ je END
+ jmp L
+```
