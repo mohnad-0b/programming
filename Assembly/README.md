@@ -184,3 +184,36 @@
         loop L2
         hlt
   ```
+  
+  6-copy the following string to another string starting from first space
+x db 'This is my program'
+y db 20 dup(?)
+
+```assmbly
+org 100h
+
+mov di,offset x
+mov si,offset y
+mov al," "
+mov cx , 20
+
+L: 
+ scasb
+ je FindSpace
+ inc si
+ loop L 
+           
+HLT
+
+x db 'This is my program'
+y db 20 dup(?)
+
+FindSpace:  
+  mov al,[di]
+  mov [si],al
+  inc si
+  inc di
+  loop FindSpace
+ HLT 
+
+```
