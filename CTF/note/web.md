@@ -17,3 +17,12 @@ Don't send the SIGNATURE send like this :
 and don't forget dot `.` 
 
 ---
+to crack jwt use it command :
+```bash
+flask-unsign --unsign --no-literal-eval --wordlist /usr/share/wordlists/rockyou.txt --cookie eyJsb2dpbiI6dHJ1ZSwidXNlciI6Im1vaG5hZCIsImFsZyI6IkhTMjU2In0.Ywfvv703.uwZ8eXSTttoVjrXphTqPQprtQod81UmIo6xRfcWY3ao
+```
+
+---
+```
+in php " " == ${IFS}
+```
