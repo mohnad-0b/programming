@@ -26,3 +26,5 @@ flask-unsign --unsign --no-literal-eval --wordlist /usr/share/wordlists/rockyou.
 ```
 in php " " == ${IFS}
 ```
+---
+[backdore php](https://sushant747.gitbooks.io/total-oscp-guide/content/webshell.html)
