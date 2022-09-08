@@ -11,7 +11,7 @@ find capabilities
 getcap -r / 2>/dev/null
 ```
 ---
-find you owne file 
+find your own file
 ```bash
 find / -user $you_user 2>/dev/null | grep  -v '/proc\|/run\|/var/www\|'
 ```
