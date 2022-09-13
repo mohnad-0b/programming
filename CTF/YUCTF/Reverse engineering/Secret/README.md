@@ -1,0 +1,1 @@
+is [python disassembler](https://docs.python.org/3.5/library/dis.html)  but i am laizy to solve it :)
