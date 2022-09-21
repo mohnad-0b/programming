@@ -11,7 +11,7 @@ in JWT
   "alg": "none"
 }
 ```
-none or NoNe or noNE ...etc
+none or NoNe or noNE ...etc                                                            
 Don't send the SIGNATURE send like this :
 
 `eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJyb2xlIjoiYWRtaW4ifQ.`
