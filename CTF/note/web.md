@@ -42,3 +42,8 @@ JWT Brute-forcing secret keys using hashcat
 ```bash
 hashcat -a 0 -m 16500 <jwt> <wordlist>
 ```
+
+---
+[Algorithm confusion attacks](https://portswigger.net/web-security/jwt/algorithm-confusion)
+
+Check /jwks.json or /.well-known/jwks.json
