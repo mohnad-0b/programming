@@ -25,3 +25,12 @@ port listen local
 ```bash
 netstat -atp
 ```
+---
+if  `cat` in black list we can use  `tac`
+
+---
+ctrl + k &rarr; cut all text from the cursor to the end of the line                                                    
+ctrl + u &rarr; cut all text from the cursor to the start of the line                                                    
+ctrl + y &rarr; past   
+
+---
