@@ -10,7 +10,7 @@ z =  901528276708487058057587232090319960213260294649519831049430556419957125286
 e =  65537
 
 ##################################################################
-#                   part 1: find haif of the flag                #
+#                   part 1: find Half of the flag                #
 ##################################################################
 
 def fermat(n):
@@ -59,7 +59,7 @@ d1 = pow(e,-1,phi1)
 m1 = pow(c1_original,d1,n1)
 print(long_to_bytes(m1))
 
-# find haif of flag b"JISCTF{1_Th1nK_1t's_E@sy_RSA_52"
+# find Half of flag b"JISCTF{1_Th1nK_1t's_E@sy_RSA_52"
 
 
 
