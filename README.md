@@ -1,6 +1,6 @@
 # programming
 
-in this repo, I share with you a problem solver and programming challenge
+in this repo, I share with you a problem solver and programming challenge or [CTF writeups](https://github.com/mohnad-0b/programming/tree/main/CTF)
 
 ```
 git clone https://github.com/mohnad-0b/programming.git
