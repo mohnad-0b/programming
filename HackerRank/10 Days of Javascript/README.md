@@ -22,3 +22,4 @@
 #### [Day 4 Create a Rectangle Object](https://github.com/mohnad-0b/programming/blob/main/HackerRank/10%20Days%20of%20Javascript/code/Day%204%20Create%20a%20Rectangle%20Object.js)
 ---
 #### [Day 5 Inheritance](https://github.com/mohnad-0b/programming/blob/main/HackerRank/10%20Days%20of%20Javascript/code/Day%205%20Inheritance.js)
+#### [Day 5: Template Literals](https://github.com/mohnad-0b/programming/blob/main/HackerRank/10%20Days%20of%20Javascript/code/Day%205%20Template%20Literals.js)
