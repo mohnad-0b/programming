@@ -1,0 +1,20 @@
+Hi :) I'm Hackerspace_JUST's v0.1 bot (Beta version).
+I've been told that I have attitude, so I have to behave myself to take the permissions from the admins to be launched to the public.
+I'm sadly trying... No promises...
+Anyway, I wanna play a tic-tac-toe with you silly player, huh!
+I'm the best in this game, and you'll lose anyway, loser ... As I have a technique that I always use to win.
+I don't mind sharing my technique with you. I'll win anyway! It's as the following:
+I always start randomly from any corner.
+Then I start going into one direction, starting from the direct neibghors to my initial corner I selected.
+I'll start moving through the diagonal line to win.
+If the next step was blocked for me, I'll start moving towards the end of the row that I started from.
+If you blocked me again, I'll start moving towards the end of the column that I started from.
+If it was blocked as well, I'll select the next move randomly. It sometimes work, and I win.
+Now you know my technique, try your best huh
+For each round, I'll send the initial game to you, with my first move I already done.
+You should send 'x,y' (In the exact format!!! Without the 'single qoutes'). Where x is the x-axis and y is the y-axis of the position you wanna play.
+The values for x & y should be 1, 2, or 3 only. (e.g: '2,2' for the middle cell)
+If you sent any other values, or any other format. I'll happely close the game with you :)
+BTW, As I saied, I'll always start playing, and 'X' symbol is mine, my game, my rules huh!
+I'll give you the flag only if you kept winning tell I acknowledge your skills. Which will never happen LOL
+Do your best, loser..

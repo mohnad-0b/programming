@@ -1,0 +1,14 @@
+Let's Play Janken!
+Janken or (Rock Paper Scissor) game is the best way to determine who can decide in critical situations!
+But some people can always be the deciders and win this game!
+In this game, you should win 100 or maybe 1000 idk, consecutive rounds to get the flag :3
+And if Tie appears in one round then it will not be counted and that round will begin again!
+Winning Rules of the Janken game as follows:
+Rock vs paper->paper wins
+Rock vs scissor->Rock wins
+paper vs scissor->scissor wins
+One last thing! Me as a game can't select the selection from the previous round.
+----------------
+
+Round number 1:
+Want to play Rock, Paper or Scissor? [R, P, S]: 
