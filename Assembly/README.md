@@ -239,3 +239,55 @@ findA:
  je END
  jmp L
 ```
+
+8- write a progran that find the max and min number in the following array arr[] = {1,-5,0,7,9,-8,13,-12,4,-2}
+
+```Assembly
+;write a progran that find the max and min number in the following array
+;arr[] = {1,-5,0,7,9,-8,13,-12,4,-2}
+
+org 100h
+
+mov si, offset arr
+mov cx,10
+mov al , [si]
+mov min , al
+mov max , al
+
+
+L: 
+    mov al,[si]
+    
+    ;L_for_find_min:
+        cmp al,min
+        jl find_min
+    
+    L_for_find_max:
+        cmp al,max
+        jg find_max
+    
+    inc si 
+loop L
+
+hlt
+
+arr db 1,-5,0,7,9,-8,13,-12,4,-2
+min db 0
+max db 0
+
+
+find_min:
+    mov min,al
+    cmp cx,0
+    jne L_for_find_max 
+    hlt 
+    
+find_max:
+    mov max,al
+    inc si   
+    dec cx
+    cmp cx,0
+    jne L
+    hlt  
+ ```
+   
