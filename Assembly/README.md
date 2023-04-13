@@ -2,7 +2,7 @@
 
 
 
-  1- Procedure to find number of odd words in the array
+ 1- Procedure to find number of odd words in the array
    
  ```Assembly
         org 100h
@@ -27,7 +27,10 @@
      inc odd
      jmp c
  ```
-  2- Procedure to find the maximum word in the array
+ 
+ ---
+ 
+ 2- Procedure to find the maximum word in the array
  ```Assembly
         org 100h
     
@@ -50,7 +53,10 @@
     mov max ,ax
     jmp c
  ```
-  3- Procedure to find number of 1's in the maximum word
+ 
+ ---
+ 
+ 3- Procedure to find number of 1's in the maximum word
  ```Assembly
     org 100h
     
@@ -84,7 +90,10 @@
     inc one
     jmp c2
 ```
-   4- write a program to store 'y' in the variable same if the two strings X and Y are same else store 'N' in the variable same if the two stringsX and Yare not same
+
+---
+
+4- write a program to store 'y' in the variable same if the two strings X and Y are same else store 'N' in the variable same if the two stringsX and Yare not same
    
    X db 'abcdaefgak'
    Y db 'abcdlefgak'
@@ -110,8 +119,10 @@
      hlt
 ```
 
-  5- input number and print "*" in center secren
-  
+---
+
+
+5- input number and print "*" in center secren  
 ```Assembly
     org 100h
     
@@ -137,7 +148,10 @@
     
     msg db "*"
 ```
-  6- if input "A" print 
+
+---
+
+6- if input "A" print 
   
   A   A   A   A
   A     A     A
@@ -184,8 +198,10 @@
         loop L2
         hlt
   ```
-  
-  6-copy the following string to another string starting from first space
+ 
+---
+ 
+7-copy the following string to another string starting from first space
 x db 'This is my program'
 y db 20 dup(?)
 
@@ -217,7 +233,10 @@ FindSpace:
  HLT 
 
 ```
-7- replace the character 'a' in the follwing string to '\*' string 
+
+---
+
+8- replace the character 'a' in the follwing string to '\*' string 
 db 'abcdefaghiak'
 
 ```Assembly
@@ -240,7 +259,9 @@ findA:
  jmp L
 ```
 
-8- write a progran that find the max and min number in the following array arr[] = {1,-5,0,7,9,-8,13,-12,4,-2}
+---
+
+9- write a progran that find the max and min number in the following array arr[] = {1,-5,0,7,9,-8,13,-12,4,-2}
 
 ```Assembly
 ;write a progran that find the max and min number in the following array
@@ -290,4 +311,103 @@ find_max:
     jne L
     hlt  
  ```
-   
+ 
+ ---
+ 
+10- Write a program in assembly language to read the following matrix x db 1,5,4,3,6 
+
+&nbsp;&thinsp;odd numbers counter \
+&nbsp;&thinsp;even numbers counter \
+&nbsp;&thinsp;odd numbers sum  \
+&nbsp;&thinsp;even numbers sum 
+  
+```Assembly
+org 100h
+
+mov si, offset arr
+mov cx,5   
+mov bl,2
+; div x => ax = al/x
+L:  
+    mov al,[si]  
+    div bl
+    cmp ah,0
+    je find_even
+    jmp find_odd    
+
+
+hlt
+ 
+arr db 01h,05h,04h,03h,06h
+
+num_odd db 0
+num_even db 0
+sum_of_odd db 0 
+sum_of_even db 0
+
+
+find_even:
+    inc num_even
+    mov al,[si]
+    add sum_of_even,al
+    inc si
+    dec cx
+    cmp cx,0
+    jne L
+    hlt
+    
+find_odd:
+    inc num_odd
+    mov al,[si]
+    add sum_of_odd,al
+    inc si
+    dec cx
+    cmp cx,0
+    jne L
+```
+
+use for loop 
+
+```Assembly
+org 100h
+
+mov si, offset arr
+mov cx,5   
+mov bl,2
+; div x => ax = al/x
+L:  
+    mov al,[si]  
+    div bl
+    cmp ah,0
+    je find_even
+    jmp find_odd 
+    C:
+loop L   
+
+
+hlt
+ 
+arr db 01h,05h,04h,03h,06h
+
+num_odd db 0
+num_even db 0
+sum_of_odd db 0 
+sum_of_even db 0
+
+
+find_even:
+    inc num_even
+    mov al,[si]
+    add sum_of_even,al
+    inc si
+    jmp C
+  
+    
+find_odd:
+    inc num_odd
+    mov al,[si]
+    add sum_of_odd,al 
+    inc si
+    jmp C
+```
+
