@@ -411,3 +411,56 @@ find_odd:
     jmp C
 ```
 
+--- 
+
+11 - Write an assembly code to set bit#3 and reset bit#4 in each element in array Z.
+Z DB 66H,78H,33H
+
+```Assembly
+org 100h
+
+mov cx,3
+mov si,offset ZZ
+
+L:
+and [si],247
+or [si],4
+inc si
+loop L 
+
+hlt
+
+ZZ DB 66H,78H,33H
+```
+
+---
+
+12 - convert the capital letters to small letters and the small to capital in string str
+str db ‘ABcdEFgh’
+
+```Assembly
+org 100h
+
+mov cx,8
+mov si,offset str
+
+L:
+mov al,[si]
+and al,32
+cmp al,0
+je s_to_c 
+and [si],223
+inc si
+loop L 
+
+hlt
+
+
+str db 'ABcdEFgh'
+
+s_to_c:
+      or [si],32
+      inc si
+      dec cx
+      jmp L
+```
