@@ -1,0 +1,36 @@
+| makeresults
+| eval G00="1", G01="2", G02="3"
+| eval G10="4", G11="5", G12="6"
+| eval G20="7", G21="8", G22="9"
+| fields - _time
+| eval X_wins=if(
+    (G00=="X" AND G01=="X" AND G02=="X") OR
+    (G10=="X" AND G11=="X" AND G12=="X") OR
+    (G20=="X" AND G21=="X" AND G22=="X") OR
+    (G00=="X" AND G10=="X" AND G20=="X") OR
+    (G01=="X" AND G11=="X" AND G21=="X") OR
+    (G02=="X" AND G12=="X" AND G22=="X") OR
+    (G00=="X" AND G11=="X" AND G22=="X") OR
+    (G02=="X" AND G11=="X" AND G20=="X"),
+    "X wins", ""
+)
+| eval O_wins=if(
+    (G00=="O" AND G01=="O" AND G02=="O") OR
+    (G10=="O" AND G11=="O" AND G12=="O") OR
+    (G20=="O" AND G21=="O" AND G22=="O") OR
+    (G00=="O" AND G10=="O" AND G20=="O") OR
+    (G01=="O" AND G11=="O" AND G21=="O") OR
+    (G02=="O" AND G12=="O" AND G22=="O") OR
+    (G00=="O" AND G11=="O" AND G22=="O") OR
+    (G02=="O" AND G11=="O" AND G20=="O"),
+    "O wins", ""
+)
+| eval result=if(X_wins=="X wins", "X wins", if(O_wins=="O wins", "O wins", "No winner yet"))
+| eval row1=if(result=="No winner yet", "| ".G00." | ".G01." | ".G02." |", null())
+| eval row2=if(result=="No winner yet", "| ".G10." | ".G11." | ".G12." |", null())
+| eval row3=if(result=="No winner yet", "| ".G20." | ".G21." | ".G22." |", null())
+| eval table=if(result=="No winner yet", row1."
+".row2."
+".row3, null())
+| eval output=if(result=="No winner yet", table, "How win: ".result)
+| fields output
